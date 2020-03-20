@@ -1,5 +1,15 @@
-<section id="main-menu-pane" class="row text-center main-menu">
-  {{ range sort .Site.Menus.main }}
-  <h4><a class="menu-item" href="{{ .URL }}">{{ .Name | lower }}</a></h4>
-  {{ end }}
+<section id="main-menu-pane" class="row main-menu">
+  <div class="container">
+    {{ range sort .Site.Menus.main }}
+      <div class="row text-center">
+        <div class="col text-center">
+          <h4>
+            <a class="btn btn-light menu-item" href="{{ .URL }}">
+              {{ .Name }}
+            </a>
+          </h4>
+        </div>
+      </div>
+    {{ end }}
+  </div>
 </section>
